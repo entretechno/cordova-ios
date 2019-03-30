@@ -30,7 +30,7 @@ var Q = require('q'),
  * @return {Promise} Promise fulfilled with list of devices available for simulation
  */
 function listEmulatorImages () {
-    return Q.resolve(iossim.getdevicetypes());
+    return Q.resolve(new iossim.ShowDeviceTypesCommand().run());
 }
 
 
